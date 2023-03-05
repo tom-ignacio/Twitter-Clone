@@ -7,6 +7,7 @@ export interface I_User extends Document {
   username: string;
   name: string;
   profile_picture: string;
+  description: string;
   create_date: Date;
   comparePassword: (password: string) => Promise<boolean>;
 }
@@ -18,13 +19,13 @@ const userSchema = new Schema({
     lowercase: true,
     trim: true,
     required: true, 
-    match: [/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Please enter a valid email'],
+    //match: [/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Please enter a valid email'],
   },
 
   password: {
     type: String,
     required: true,
-    minLength: 6
+    //minLength: 6
   },
 
   username: {
@@ -33,19 +34,23 @@ const userSchema = new Schema({
     required: true,
     lowercase: true,
     trim: true,
-    maxLength: 15
+    //maxLength: 15
   },
 
   name: {
     type: String,
     required: true,
-    maxLength: 15
+    //maxLength: 15
   },
 
   profile_picture: {
     type: String,
     required: true,
     default: "https://i.pinimg.com/474x/ee/cf/13/eecf132f812bdf4ca87b339563f1ffa5.jpg"
+  },
+
+  description: {
+    type: String
   },
 
   create_date: {

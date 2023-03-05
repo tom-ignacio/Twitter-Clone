@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "3e30e93a-3473-406c-8c7b-0814d39a4370",
+		"name": "Twitter-Clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25556904"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"tomas@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"username\": \"tomas\",\r\n    \"name\": \"Tom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456\",\r\n    \"username\": \"tomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456\",\r\n    \"username\": \"tomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456\",\r\n    \"username\": \"tomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tommy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tommy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new tweet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"6405029aa72c7e86d1b3674b\",\r\n    \"description\": \"Mi primer tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tweets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"tomas\",\r\n    \"description\": \"Mi primer tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tweet by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"tomas\",\r\n    \"description\": \"Mi primer tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tweet/640505e2c799bdd02fa2a7ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tweet",
+						"640505e2c799bdd02fa2a7ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tweet by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tweet/640505e2c799bdd02fa2a7ce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tweet",
+						"640505e2c799bdd02fa2a7ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new reply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"6405029aa72c7e86d1b3674b\",\r\n    \"tweet_id\": \"64050994b7fd82c01d444812\",\r\n    \"description\": \"Un comentario en tu segundo tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get replies by tweet ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"6405029aa72c7e86d1b3674b\",\r\n    \"tweet_id\": \"64050994b7fd82c01d444812\",\r\n    \"description\": \"Un comentario en tu segundo tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reply/64050680c799bdd02fa2a7d9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reply",
+						"64050680c799bdd02fa2a7d9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete reply by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"6405029aa72c7e86d1b3674b\",\r\n    \"tweet_id\": \"64050994b7fd82c01d444812\",\r\n    \"description\": \"Un comentario en tu segundo tweet en Twitter Clone\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reply/64050a2c32e2b5f0c003d536",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reply",
+						"64050a2c32e2b5f0c003d536"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

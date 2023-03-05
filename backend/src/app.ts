@@ -4,7 +4,9 @@ import cors from "cors";
 import authRoutes from "./routes/auth.routes";
 import passportMid from "./middlewares/passport";
 import passport from "passport";
-import specialRoutes from "./routes/special.routes";
+import userRoutes from "./routes/user.routes";
+import tweetRoutes from "./routes/tweet.routes";
+import replyRoutes from "./routes/reply.routes";
 
 const app = express();
 
@@ -22,6 +24,8 @@ app.get("/", (_req, res) => {
 });
 
 app.use(authRoutes);
-app.use(specialRoutes);
+app.use(userRoutes);
+app.use(tweetRoutes);
+app.use(replyRoutes);
 
 export default app;

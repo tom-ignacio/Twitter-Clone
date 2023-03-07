@@ -1,6 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
-import Reply, { I_Reply } from "../models/reply";
+import Reply from "../models/reply";
 
 const router = Router();
 
@@ -34,6 +34,15 @@ router.delete(
     const { replyId } = req.params;
     await Reply.findByIdAndDelete(replyId);
     res.status(200).json();
+  }
+);
+
+router.get(
+  "/replyCount/:tweet_id", // Get amount of replies by tweet ID
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const replies = await Reply.countDocuments({tweet_id: req.params.tweet_id});
+    return res.json(replies);
   }
 );
 

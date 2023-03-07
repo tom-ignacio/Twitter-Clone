@@ -501,6 +501,412 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get amount of replies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgxNDY2NDAsImV4cCI6MTY3ODc1MTQ0MH0.aFIDCyOBEkavEy08Lfc698ayMPf7gyaHAdcZAoF1tB8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/replyCount/64050994b7fd82c01d444812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"replyCount",
+						"64050994b7fd82c01d444812"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like a tweet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgxNDY2NDAsImV4cCI6MTY3ODc1MTQ0MH0.aFIDCyOBEkavEy08Lfc698ayMPf7gyaHAdcZAoF1tB8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"owner\": \"6405029aa72c7e86d1b3674b\",\r\n    \"tweet_id\": \"64050994b7fd82c01d444812\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike a tweet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgxNDY2NDAsImV4cCI6MTY3ODc1MTQ0MH0.aFIDCyOBEkavEy08Lfc698ayMPf7gyaHAdcZAoF1tB8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/like/64067ce0fbeddff375a5e548",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"like",
+						"64067ce0fbeddff375a5e548"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get amount of likes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgxNDY2NDAsImV4cCI6MTY3ODc1MTQ0MH0.aFIDCyOBEkavEy08Lfc698ayMPf7gyaHAdcZAoF1tB8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/like/64050994b7fd82c01d444812",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"like",
+						"64050994b7fd82c01d444812"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"follower\": \"6405029aa72c7e86d1b3674b\",\r\n    \"following\": \"6405029aa72c7e86d1b3674b (DELETE)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/follow/64068391dd104f1921089750",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"follow",
+						"64068391dd104f1921089750"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get amount of user following",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/following/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"following",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get amount of user followers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/followers/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followers",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of user followers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/followersList/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followersList",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of user following",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzgwNTAyNzUsImV4cCI6MTY3ODY1NTA3NX0.rKIdrroVUTCa5dVWE3j2u9Jxg-df8SQTUxcxtiEhaQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/followingList/6405029aa72c7e86d1b3674b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"followingList",
+						"6405029aa72c7e86d1b3674b"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

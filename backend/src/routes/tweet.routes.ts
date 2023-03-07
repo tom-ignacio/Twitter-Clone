@@ -1,6 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
-import Tweet, { I_Tweet } from "../models/tweet";
+import Tweet from "../models/tweet";
 
 const router = Router();
 

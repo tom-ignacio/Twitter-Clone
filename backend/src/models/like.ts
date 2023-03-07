@@ -24,4 +24,4 @@ const likeSchema = new Schema({
 });
 likeSchema.pre<I_Like>("save", async function (next) {});
 
-export default model<I_Like>("reply", likeSchema);
+export default model<I_Like>("like", likeSchema);

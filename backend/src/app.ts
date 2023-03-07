@@ -7,6 +7,8 @@ import passport from "passport";
 import userRoutes from "./routes/user.routes";
 import tweetRoutes from "./routes/tweet.routes";
 import replyRoutes from "./routes/reply.routes";
+import likeRoutes from "./routes/like.routes";
+import followRoutes from "./routes/follow.routes";
 
 const app = express();
 
@@ -27,5 +29,7 @@ app.use(authRoutes);
 app.use(userRoutes);
 app.use(tweetRoutes);
 app.use(replyRoutes);
+app.use(likeRoutes);
+app.use(followRoutes);
 
 export default app;

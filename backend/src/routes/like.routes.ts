@@ -15,11 +15,10 @@ router.post(
 );
 
 router.delete(
-  "/like/:likeId", // Unlike a tweet
+  "/like/:owner/:tweet_id", // Unlike a tweet
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const { likeId } = req.params;
-    await Like.findByIdAndDelete(likeId);
+    const Unlike = await Like.findOneAndDelete({owner: req.params.owner, tweet_id: req.params.tweet_id});
     res.status(200).json();
   }
 );

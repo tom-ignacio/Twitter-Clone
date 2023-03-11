@@ -1,6 +1,7 @@
 import { Router } from "express";
 import passport from "passport";
 import Tweet from "../models/tweet";
+import { models } from "mongoose";
 
 const router = Router();
 
@@ -22,7 +23,7 @@ router.get(
   "/tweet", // Get all tweets
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const Tweets = await Tweet.find();
+    const Tweets = await Tweet.find().sort({create_date:'desc'});;
     res.json(Tweets);
   }
 );
@@ -41,10 +42,11 @@ router.get(
   "/tweet/:owner", // Get tweets by user ID
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const tweets = await Tweet.find({owner: req.params.owner});
+    const tweets = await Tweet.find({owner: req.params.owner}).sort({create_date:'desc'});;
     return res.json(tweets);
   }
 );
+
 
 router.delete(
   "/tweet/:tweetId", // Delete tweet by ID

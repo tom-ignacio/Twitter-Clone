@@ -15,11 +15,10 @@ router.post(
 );
 
 router.delete(
-  "/follow/:followId", // Unfollow a user
+  "/follow/:follower/:following", // Unfollow a user
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const { followId } = req.params;
-    await Follow.findByIdAndDelete(followId);
+    const Unfollow = await Follow.findOneAndDelete({follower: req.params.follower, following: req.params.following});
     res.status(200).json();
   }
 );

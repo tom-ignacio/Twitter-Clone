@@ -67,3 +67,11 @@ export const signIn = async (req: Request, res: Response) => {
   });
 };
 
+export const searchUsers = async (req: Request, res: Response) => {
+  const user = await User.find({username: { $regex: req.params.username }});
+  if (user) {
+    res.status(200).json(user);
+  } else {
+    return res.status(400).json({ msg: "No users were found..." });
+  }
+};

@@ -908,6 +908,90 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Search tweets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzkxNzQwMDMsImV4cCI6MTY3OTc3ODgwM30.lN9x46-umpzce0Mbnilx5JKOnRn7wzKNNMvMxLgFVIE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/searchTweets/rep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"searchTweets",
+						"rep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDUwMjlhYTcyYzdlODZkMWIzNjc0YiIsInVzZXJuYW1lIjoidG9tYXMiLCJpYXQiOjE2NzkxNzQwMDMsImV4cCI6MTY3OTc3ODgwM30.lN9x46-umpzce0Mbnilx5JKOnRn7wzKNNMvMxLgFVIE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/searchUsers/to",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"searchUsers",
+						"to"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

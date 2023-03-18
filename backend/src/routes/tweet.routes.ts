@@ -42,7 +42,7 @@ router.get(
   "/tweet/:owner", // Get tweets by user ID
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const tweets = await Tweet.find({owner: req.params.owner}).sort({create_date:'desc'});;
+    const tweets = await Tweet.find({owner: req.params.owner}).sort({create_date:'desc'});
     return res.json(tweets);
   }
 );
